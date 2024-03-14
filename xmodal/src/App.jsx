@@ -22,9 +22,7 @@ function App() {
       document.removeEventListener('mousedown', handleClickOutside);
     }
 
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    
   }, [forms]);
 
   const handleSubmit = (e) => {
@@ -50,7 +48,7 @@ function App() {
       <h1>User Detail Modal</h1>
       <button onClick={() => setForms(!forms)}>{!forms ? 'Open Form' : 'Close Form'}</button>
       <div>
-      {forms && (
+      {forms?(
         <div className="modal" ref={modalRef}>
           <div className="modal-content">
             <form onSubmit={handleSubmit}>
@@ -67,7 +65,7 @@ function App() {
             </form>
           </div>
         </div>
-      )}
+      ):(<div></div>)}
       </div>
     </div>
   );

@@ -16,7 +16,7 @@
 }
 form {
   display: flex;
-  width: 50em;
+  width: 30em;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -24,8 +24,8 @@ form {
   box-shadow: 0.4em 0.3em 0.5em 0.4em rgba(0,0,0,0.3);
 }
 input {
-  width: 15em;
-  height: 2em;
+  width: 10em;
+  height: 1em;
   padding: 0.5em;
   border: 2px solid black;
   border-radius: 5px;
