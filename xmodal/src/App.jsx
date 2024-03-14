@@ -11,8 +11,7 @@ function App() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-     
-      if (modalRef.current && modalRef.current.contains(event.target)) {
+      if (modalRef.current==event.target) {
         setForms(false);
       }
     };
@@ -47,7 +46,7 @@ function App() {
   };
 
   return (
-    <div className="card">
+    <div className="card" >
       <h1>User Detail Modal</h1>
       <button onClick={() => setForms(!forms)}>{!forms ? 'Open Form' : 'Close Form'}</button>
       {forms && (
