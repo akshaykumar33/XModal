@@ -49,6 +49,7 @@ function App() {
     <div className="card" >
       <h1>User Detail Modal</h1>
       <button onClick={() => setForms(!forms)}>{!forms ? 'Open Form' : 'Close Form'}</button>
+      <div>
       {forms && (
         <div className="modal" ref={modalRef}>
           <div className="modal-content">
@@ -61,12 +62,13 @@ function App() {
               <label>Phone Number:</label>
               <input type='tel' value={phno} name='phno' id='phone' required onChange={(e) => setPhno(e.target.value)} />
               <label>Date of Birth:</label>
-              <input type='date' value={date} name='date' id='date' required onChange={(e) => setDate(e.target.value)} />
+              <input type='date' value={date} name='date' id='dob' required onChange={(e) => setDate(e.target.value)} />
               <button type='submit' className='submit-button'>Submit</button>
             </form>
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }
